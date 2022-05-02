@@ -1,0 +1,41 @@
+<head>
+    <link href="../static/css/style.css" rel="stylesheet">
+</head>
+<body class="background"></body>
+
+<center>
+    <div>
+        <img src = "../static/img/Standing.svg" class="persona1"/>
+        <form action="/registro" method="POST">
+            <h1 class="registro2">Registro</h1><br>
+            <div>
+                <label class="usuario">Usuario:</label>
+                <input type="text" class="form-input" name="name">
+            </div>
+
+            <div>
+                <label class="rol">Seleccione su rol:</label>
+                <select class="rol" name= "rol">
+                    <option value="0">           </option>
+                    {% for rol in rol %}
+                    <option value="{{rol.id_rol}}">{{ rol.nom_rol}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div>
+                <label class="email">Correo Electronico:</label>
+                <input type="email" class="form-input" name="email">
+            </div>
+
+            <div >
+                <label class="contraseña">Contraseña:</label>
+                <input type="password" class="form-input" name="password">
+            </div>
+
+            <div>
+                <button class="Registrar">Registrar</button>
+            </div>
+        </form>
+    </div>
+</center>

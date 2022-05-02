@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link href="../static/css/style.css" rel="stylesheet">
+</head>
+<body class="background">
+    <img src = "../static/img/Hero Image.svg" class="persona1"/>
+    <img src = "../static/img/Humaaan.svg" class="persona2"/>
+    <img src = "../static/img/Hero Cabeza.svg" class="persona3"/>       
+        <a href="/"><label>What Do I Bring</label></a>
+        <a class="home" href="/">Home </a>
+        <a class = "login" href="/login">Login </a>
+        <a class ="registro" href="/registro">Registro </a>
+    
+    {% block content %}
+    
+    {% endblock %}
+</body>
+</html>
