@@ -139,6 +139,14 @@
     color: #000000;
 }
 
+.Rrol{
+    position: absolute;
+    width: 143px;
+    height: 46px;
+    left: 648px;
+    top: 431px;
+}
+
 .usuario{
     position: absolute;
     width: 106px;
