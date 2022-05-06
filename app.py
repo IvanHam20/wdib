@@ -48,6 +48,27 @@ def registro():
         notificacion.send()
         return redirect(url_for('login'))
 
+@app.route('/home', methods = ["GET", "POST"])
+def lista():
+
+    cur = mysql.connection.cursor()
+
+    cur.close()
+
+    notificacion = Notify()
+
+    material = request.form['material']
+    tipo = request.form['tipo']
+    cantidad = request.form['cantidad']
+    num_prac = request.form['num_prac']
+
+    cur = mysql.connection.cursor()
+    cur.execute("INSERT INTO practicas (material, tipo, cantidad, num_prac) VALUES (%s,%s,%s,%s)", (material, tipo, cantidad,num_prac))
+    mysql.connection.commit()
+    notificacion.title = "Se agrego correctamente"
+    notificacion.send()
+    return render_template("profesor/home.html")
+
 @app.route('/login', methods= ["GET", "POST"])
 def login():
 
