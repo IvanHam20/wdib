@@ -211,3 +211,103 @@
 
     color: #000000;
 }
+
+.tlogin{
+    position: absolute;
+    width: 429px;
+    height: 92px;
+    left: 122px;
+    top: 14px;
+
+    font-family: 'Bodoni Moda';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 92px;
+
+    color: #000000;
+}
+
+.correo{
+    position: absolute;
+    width: 259px;
+    height: 46px;
+    left: 590px;
+    top: 150px;
+
+    font-family: 'Bodoni Moda';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 46px;
+
+    color: #000000;
+}
+
+.rcorreo{
+    position: absolute;
+    width: 496px;
+    height: 25px;
+    left: 472px;
+    top: 205px;
+
+    background: #FFFFFF;
+}
+
+.lcontra{
+    position: absolute;
+    width: 259px;
+    height: 46px;
+    left: 640px;
+    top: 240px;
+
+    font-family: 'Bodoni Moda';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 46px;
+
+    color: #000000;
+}
+
+.rlcontra{
+    position: absolute;
+    width: 496px;
+    height: 25px;
+    left: 472px;
+    top: 300px;
+
+    background: #FFFFFF;
+}
+
+.lregistro{
+    position: absolute;
+    width: 190px;
+    height: 31px;
+    left: 377px;
+    top: 620px;
+
+    font-family: 'Bodoni Moda';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 31px;
+
+    color: #000000;
+}
+
+.nocuenta{
+    position: absolute;
+    width: 190px;
+    height: 31px;
+    left: 377px;
+    top: 420px;
+
+    font-family: 'Bodoni Moda';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 31px;
+
+    color: #000000;
+}

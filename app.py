@@ -48,7 +48,7 @@ def registro():
         notificacion.send()
         return redirect(url_for('login'))
 
-@app.route('/home', methods = ["GET", "POST"])
+@app.route('/listas', methods = ["GET", "POST"])
 def lista():
 
     cur = mysql.connection.cursor()
@@ -58,16 +58,31 @@ def lista():
     notificacion = Notify()
 
     material = request.form['material']
-    tipo = request.form['tipo']
     cantidad = request.form['cantidad']
-    num_prac = request.form['num_prac']
 
     cur = mysql.connection.cursor()
-    cur.execute("INSERT INTO practicas (material, tipo, cantidad, num_prac) VALUES (%s,%s,%s,%s)", (material, tipo, cantidad,num_prac))
+    cur.execute("INSERT INTO practicas (material, cantidad) VALUES (%s,%s)", (material,cantidad))
     mysql.connection.commit()
     notificacion.title = "Se agrego correctamente"
     notificacion.send()
     return render_template("profesor/home.html")
+
+@app.route('/home', methods= ["GET", "POST"])
+def practicas():
+    if request.method == "GET":
+        cur = mysql.connection.cursor()
+        query = "SELECT * FROM nombre_practicas WHERE id_maestro = (%s)"
+        cur.execute(query, (session["id"],))
+        data = cur.fetchall()
+        cur.close()
+        return render_template("profesor/home.html", practicas=data)
+    else:    
+        nombre = request.form['data']
+        cur = mysql.connection.cursor()
+        cur.execute("INSERT INTO nombre_practicas (name, id_maestro) VALUES (%s, %s)", (nombre, session["id"]))
+        mysql.connection.commit()
+        cur.close()
+        return redirect('/home')
 
 @app.route('/login', methods= ["GET", "POST"])
 def login():
@@ -85,12 +100,13 @@ def login():
 
         if len(user)>0:
             if password == user["password"]:
+                session['id'] = user['id']
                 session['name'] = user['name']
                 session['email'] = user['email']
                 session['rol'] = user['id_rol']
 
                 if session['rol'] == 1:
-                    return render_template("profesor/home.html")
+                    return redirect("/home")
                 elif session['rol'] == 2:
                     return render_template("alumno/home2.html")
 

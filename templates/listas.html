@@ -1,9 +1,10 @@
-<head>
-    <link href="../static/css/style.css" rel="stylesheet">
-</head>
-<body class="background"></body>
+<body class="background">
+    <div>
+        <h1> BIENVENIDO {{ session['name'] }}</h1>
+        <h2>Profesor</h2>
+        <button><a href="/layout">Salir</a></button>
 
-    <center>
+        <center>
         <form action="/home" method="POST">
             <!--<h1 class="registro2">Listas de tareas</h1><br>-->
             <div>
@@ -31,3 +32,6 @@
             </div>
         </form>
     </center>
+    </div>
+    
+</body>
