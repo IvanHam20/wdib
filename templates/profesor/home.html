@@ -14,13 +14,17 @@
             $.post("/home", {
                 data: nombre
             });
+            window.location.replace("/home");
         }
     </script>
 </head>
 
 <body class="background">
     {% for practica in practicas %}
-    <p>{{ practica["name"] }}</p>
+    <a href="/materiales?id={{practica['id']}}">{{ practica["name"] }}</a>
+    </br>
+    <a href="/compartir?id={{practica['id']}}"> Compartir </a>
+    </br>
     {% endfor %}
     <button class="boton" onclick="addPractice()">Crear Practica</button>
 </body>

@@ -85,7 +85,7 @@
     position: absolute;
     width: 678px;
     height: 500px;
-    left: 0px;
+    left: -162px;
     top: 80px;
 }
 
@@ -306,6 +306,11 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 31px;
+    text-align: center;
+    text-decoration: none;
 
     color: #000000;
+    
+    background: #F8B195;
+    border-radius: 50px;
 }

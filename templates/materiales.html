@@ -1,7 +1,13 @@
 <body class="background">
-        <center>
-        <form action="/home" method="POST">
-            <h1 class="registro2">Listas de tareas</h1><br>
+    <center>
+        <h1 class="registro2">Materiales</h1><br>
+        {% for material in materiales %}
+        <p>{{ material["material"] }}</p>
+        <p>{{ material["cantidad"] }}</p>
+        {% endfor %}
+
+        {% if rol == 1 %}
+        <form action="/materiales?id={{practica_id}}" method="POST">
             <div>
                 <label class="usuario">Material:</label>
                 <input type="text" class="form-input" name="material">
@@ -16,7 +22,8 @@
                 <button class="Registrar">Agregar</button>
             </div>
         </form>
+        {% endif %}
     </center>
     </div>
-    
+
 </body>

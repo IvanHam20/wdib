@@ -48,24 +48,31 @@ def registro():
         notificacion.send()
         return redirect(url_for('login'))
 
-@app.route('/listas', methods = ["GET", "POST"])
-def lista():
+@app.route('/materiales', methods = ["GET", "POST"])
+def materiales():
+    if request.method == "GET":
+        materiales_id = request.args.get("id")
+        print(materiales_id)
+        cur = mysql.connection.cursor()
+        cur.execute("SELECT * FROM materiales WHERE id_practica = (%s)", (materiales_id,))
+        data = cur.fetchall()
+        print(data)
+        cur.close()
+        return render_template("materiales.html", materiales=data, practica_id=materiales_id, rol=session["rol"])
+    else:
+        material = request.form['material']
+        cantidad = request.form['cantidad']
+        id_practica = request.args.get("id")
 
-    cur = mysql.connection.cursor()
+        cur = mysql.connection.cursor()
+        cur.execute("INSERT INTO materiales (material, cantidad, id_practica) VALUES (%s,%s,%s)", (material,cantidad,id_practica))
+        mysql.connection.commit()
+        cur.close()
 
-    cur.close()
-
-    notificacion = Notify()
-
-    material = request.form['material']
-    cantidad = request.form['cantidad']
-
-    cur = mysql.connection.cursor()
-    cur.execute("INSERT INTO materiales (material, cantidad) VALUES (%s,%s)", (material,cantidad))
-    mysql.connection.commit()
-    notificacion.title = "Se agrego correctamente"
-    notificacion.send()
-    return render_template("profesor/home.html")
+        notificacion = Notify()        
+        notificacion.title = "Se agrego correctamente"
+        notificacion.send()
+        return redirect(f"/materiales?id={id_practica}")
 
 @app.route('/home', methods= ["GET", "POST"])
 def practicas():
@@ -83,6 +90,23 @@ def practicas():
         mysql.connection.commit()
         cur.close()
         return redirect('/home')
+    
+@app.route('/compartir', methods = ["GET", "POST"])
+def compartir():
+    if request.method == "GET":
+        cur = mysql.connection.cursor()
+        cur.execute("SELECT * FROM users WHERE id_rol = 2")
+        data = cur.fetchall()
+        cur.close()
+        return render_template("listaAlumnos.html", alumnos=data, practica_id = request.args.get("id"))
+    else:
+        for id_alumno in request.form:
+            cur = mysql.connection.cursor()
+            practica_id = request.args.get("id")
+            cur.execute("INSERT INTO alumno_practicas (user_id, practica_id) VALUES (%s, %s)", (id_alumno, practica_id))
+            mysql.connection.commit()
+            cur.close()
+        return redirect("/home")
 
 @app.route('/login', methods= ["GET", "POST"])
 def login():
@@ -108,7 +132,7 @@ def login():
                 if session['rol'] == 1:
                     return redirect("/home")
                 elif session['rol'] == 2:
-                    return render_template("alumno/home2.html")
+                    return redirect("/home-alumno")
 
             else:
                 notificacion.title = "Error de Acceso"
@@ -121,8 +145,19 @@ def login():
             notificacion.send()
             return render_template("login.html")
     else:
-        
         return render_template("login.html")
+
+@app.route('/home-alumno', methods=["GET", "POST"])
+def home_alumno():
+    if request.method == "GET":
+        cur = mysql.connection.cursor()
+        query = "SELECT * FROM nombre_practicas WHERE id IN(SELECT practica_id FROM alumno_practicas WHERE user_id = (%s))"
+        cur.execute(query, (session["id"],))
+        data = cur.fetchall()
+        cur.close()
+        return render_template("alumno/home2.html", practicas=data, rol=session["rol"])
+    else:
+        pass
 
 if __name__ == '__main__':
   app.secret_key = "Delfin22"

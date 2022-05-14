@@ -1,0 +1,14 @@
+<head>
+    <link href="../static/css/style.css" rel="stylesheet">
+</head>
+
+<center>
+    <h1>Alumnos</h1>
+</center>
+<form action="/compartir?id={{practica_id}}" method="POST">
+    {% for alumno in alumnos %}
+        <p>{{ alumno["name"] }}</p>
+        <input type="checkbox" name="{{alumno['id']}}">
+    {% endfor %}
+    <button>Compartir</button>
+</form>
