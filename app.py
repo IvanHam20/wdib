@@ -61,7 +61,7 @@ def lista():
     cantidad = request.form['cantidad']
 
     cur = mysql.connection.cursor()
-    cur.execute("INSERT INTO practicas (material, cantidad) VALUES (%s,%s)", (material,cantidad))
+    cur.execute("INSERT INTO materiales (material, cantidad) VALUES (%s,%s)", (material,cantidad))
     mysql.connection.commit()
     notificacion.title = "Se agrego correctamente"
     notificacion.send()
