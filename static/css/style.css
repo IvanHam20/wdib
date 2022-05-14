@@ -1,7 +1,5 @@
 .background{
     position: relative;
-    width: 1440px;
-    height: 1024px;
 
     background: #37678C;
 }
@@ -10,31 +8,31 @@
     position: absolute;
     width: 710px;
     height: 116px;
-    left: 620px;
-    top: 416px;
+    left: 320px;
+    top: 116px;
 
     font-family: 'Bodoni Moda';
     font-style: normal;
     font-weight: 400;
-    font-size: 80px;
+    font-size: 70px;
     line-height: 122px;
 }
 .registro{
     font-family: 'Bodoni Moda';
     font-style: normal;
     font-weight: 00;
-    font-size: 25px;
-    line-height: 38px;
+    font-size: 20px;
+    line-height: 25px;
     text-align: center;
     text-decoration: none;
 
     color: #000000;
 
     position: absolute;
-    width: 213px;
-    height: 38px;
-    left: 1179px;
-    top: 67px;
+    width: 120px;
+    height: 30px;
+    left: 879px;
+    top: 30px;
 
     background: #F8B195;
     border-radius: 50px;
@@ -45,18 +43,18 @@
     font-family: 'Bodoni Moda';
     font-style: normal;
     font-weight: 400;
-    font-size: 25px;
-    line-height: 38px;
+    font-size: 20px;
+    line-height: 25px;
     text-align: center;
     text-decoration: none;
 
     color: #000000;
 
     position: absolute;
-    width: 213px;
-    height: 38px;
-    left: 1561px;
-    top: 64px;
+    width: 120px;
+    height: 30px;
+    left: 1100px;
+    top: 30px;
 
     background: #F8B195;
     border-radius: 50px;
@@ -65,19 +63,19 @@
 .home{
     font-family: 'Bodoni Moda';
     font-style: normal;
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 38px;
+    font-weight: 50;
+    font-size: 20px;
+    line-height: 25px;
     text-align: center;
     text-decoration: none;
 
     color: #000000;
 
     position: absolute;
-    width: 235px;
-    height: 42px;
-    left: 108px;
-    top: 65px;
+    width: 120px;
+    height: 30px;
+    left: 38px;
+    top: 30px;
 
     background: #F8B195;
     border-radius: 50px;
@@ -86,24 +84,24 @@
 .persona1{
     position: absolute;
     width: 678px;
-    height: 917.78px;
+    height: 500px;
     left: 0px;
-    top: 99px;
+    top: 80px;
 }
 
 .persona2{
     position: absolute;
     width: 428px;
-    height: 504px;
-    left: 1400px;
-    top: 509px;
+    height: 480px;
+    left: 900px;
+    top: 150px;
     
 }
 
 .persona3{
     position: absolute;
-    height: 400.06px;
-    left: 500px;
+    height: 300px;
+    left: 300px;
     top: -40px;
 }
 
