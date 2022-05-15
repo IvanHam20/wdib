@@ -21,13 +21,16 @@
 
 <body class="background">
     <h1 class="tlogin">Listas de Materiales</h1><br>
-    {% for practica in practicas %}
-    <a href="/materiales?id={{practica['id']}}">{{ practica["name"] }}</a>
-    </br>
-    <a href="/compartir?id={{practica['id']}}"> Compartir </a>
-    </br>
-    {% endfor %}
     <button class="boton" onclick="addPractice()">Crear Practica</button>
-</body>
+    <div">
+        {% for practica in practicas %}
+        <div class="listado">
+            <a href="/materiales?id={{practica['id']}}" class="practicas">{{ practica["name"] }}</a>
+            <a href="/compartir?id={{practica['id']}}" class="compartir"> Compartir </a>
+        </div>
 
+        </br>
+        {% endfor %}
+    </div>
+</body>
 </html>

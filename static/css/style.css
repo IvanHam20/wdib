@@ -17,6 +17,17 @@
     font-size: 70px;
     line-height: 122px;
 }
+
+.boton{
+   border: 0px solid rgba(100,100,100,0.1);
+   margin-bottom: 20px;
+   font-size: 16px;
+   border-radius: 8px;
+   cursor: pointer;
+   color: #fff;
+   background-size: 150%;
+}
+
 .registro{
     font-family: 'Bodoni Moda';
     font-style: normal;
@@ -237,20 +248,27 @@
     position: absolute;
     width: 150px;
     height: 30px;
-    left: 568px;
-    top: 587px;
+    left: 610px;
+    top: 387px;
 
     font-family: 'Bodoni Moda';
     font-style: normal;
     font-weight: 400;
     font-size: 25px;
     text-align: center;
-
     color: #000000;
+
+    background-image: linear-gradient(to left, #F8B195, #F2727F,#C16B86);
+}
+
+.concuenta{
+    position: absolute;
+    top: 480px;
+    left: 585;
+    font-size: 15px;
 }
 
 .tlogin{
-    position: absolute;
     width: 600px;
     height: 92px;
     left: 30px;
@@ -261,6 +279,7 @@
     font-weight: 400;
     font-size: 60px;
     line-height: 92px;
+    display: block;
 
     color: #000000;
 }
@@ -346,26 +365,48 @@
     font-weight: 400;
     font-size: 20px;
     text-align: center;
-
     color: #000000;
+
+    background-image: linear-gradient(to left, #F8B195, #F2727F,#C16B86);
 }
 
 .nocuenta{
     position: absolute;
-    width: 190px;
     height: 31px;
-    left: 377px;
+    left: 610px;
     top: 420px;
 
     font-family: 'Bodoni Moda';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 31px;
-    text-align: center;
-    text-decoration: none;
-    color: #000000;
     
-    background: #F8B195;
-    border-radius: 50px;
+}
+
+.practicas{
+    position: left;
+
+    font-family: 'Bodoni Moda';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+
+    color: #000000;   
+}
+
+.compartir{
+    position: ri;
+
+    font-family: 'Bodoni Moda';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+
+    color: #000000;   
+}
+
+.listado{
+    display: flex;
+    justify-content: space-between;
 }
