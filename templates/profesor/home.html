@@ -20,6 +20,7 @@
 </head>
 
 <body class="background">
+    <h1 class="tlogin">Listas de Materiales</h1><br>
     {% for practica in practicas %}
     <a href="/materiales?id={{practica['id']}}">{{ practica["name"] }}</a>
     </br>

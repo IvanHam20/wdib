@@ -115,7 +115,13 @@ def login():
 
     if request.method == 'POST':
         email = request.form['email']
+        # validar con regex
+        # if (email):
+        #    return redirect("/login")
         password = request.form['password']
+        # validar con regex
+        # if (password):
+        #    return redirect("/login")
 
         cur = mysql.connection.cursor()
         cur.execute("SELECT * FROM users WHERE email=%s",(email,))

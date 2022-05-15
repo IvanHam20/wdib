@@ -1,12 +1,8 @@
-<body class="background">
-    <center>
-        <h1 class="registro2">Materiales</h1><br>
-        {% for material in materiales %}
-        <p>{{ material["material"] }}</p>
-        <p>{{ material["cantidad"] }}</p>
-        {% endfor %}
+<head>
+    <link href="../static/css/style.css" rel="stylesheet">
+</head>
 
-        {% if rol == 1 %}
+<body class="background">
         <form action="/materiales?id={{practica_id}}" method="POST">
             <div>
                 <label class="usuario">Material:</label>
@@ -22,8 +18,15 @@
                 <button class="Registrar">Agregar</button>
             </div>
         </form>
+        <h1 class="tlogin">Materiales</h1><br>
+        {% for material in materiales %}
+        <p>{{ material["material"] }}</p>
+        <p>{{ material["cantidad"] }}</p>
+        {% endfor %}
+
+        {% if rol == 1 %}
+
         {% endif %}
-    </center>
     </div>
 
 </body>

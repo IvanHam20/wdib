@@ -9,28 +9,28 @@
         <form action="/registro" method="POST">
             <h1 class="registro2">Registro</h1><br>
             <div>
-                <label class="usuario">Usuario:</label>
-                <input type="text" class="form-input" name="name">
+                <label class="usuario">Nombre Completo:</label>
+                <input type="text" class="rusuario" name="name">
             </div>
 
             <div>
+                <label class="email">Correo Electronico:</label>
+                <input type="email" class="remail" name="email">
+            </div>
+            
+            <div>
                 <label class="rol">Seleccione su rol:</label>
                 <select class="Rrol" name= "rol">
-                    <option value="0">           </option>
+                    <option value="0"></option>
                     {% for rol in rol %}
                     <option value="{{rol.id_rol}}">{{ rol.nom_rol}}</option>
                     {% endfor %}
                 </select>
             </div>
 
-            <div>
-                <label class="email">Correo Electronico:</label>
-                <input type="email" class="form-input" name="email">
-            </div>
-
             <div >
                 <label class="contraseña">Contraseña:</label>
-                <input type="password" class="form-input" name="password">
+                <input type="password" class="rcontraseña" name="password">
             </div>
 
             <div>
