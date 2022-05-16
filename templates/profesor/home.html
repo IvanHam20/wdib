@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         function addPractice() {
-            let nombre = window.prompt('Nombre: ')
+            let nombre = window.prompt('Introduzca el nombre del listado: ')
             $.post("/home", {
                 data: nombre
             });
@@ -19,9 +19,12 @@
     </script>
 </head>
 
-<body class="background">
-    <h1 class="tlogin">Listas de Materiales</h1><br>
-    <button class="boton" onclick="addPractice()">Crear Practica</button>
+<body class="background5">
+    <center>
+        <h1 class="listaMaterial">Listas de Materiales</h1><br>
+    </center>
+    <button class="boton bcrear" onclick="addPractice()">Crear Practica</button>
+    <a class="boton salir" href="/layout">Salir </a>
     <div">
         {% for practica in practicas %}
         <div class="listado">

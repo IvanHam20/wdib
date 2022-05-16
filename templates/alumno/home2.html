@@ -9,9 +9,13 @@
     <title>{% block title %} {% endblock %}</title>
 </head>
 
-<body class="background">
+<body class="background5">
+    <center>
+        <h1 class="listaMaterial">Listas de Materiales</h1><br>
+    </center>
+    <a class="boton salir" href="/layout">Salir </a>
     {% for practica in practicas %}
-    <a href="/materiales?id={{practica['id']}}">{{ practica["name"] }}</a>
+    <a class="practicas" href="/materiales?id={{practica['id']}}">{{ practica["name"] }}</a>
     </br>
     {% endfor %}
 </body>

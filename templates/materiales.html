@@ -2,35 +2,37 @@
     <link href="../static/css/style.css" rel="stylesheet">
 </head>
 
-<body class="background">
+<body class="background5">
+    <center>
+        <h1 class="Materiales">Materiales</h1><br>
+    </center>
         <form action="/materiales?id={{practica_id}}" method="POST">
             <div>
-                <label class="usuario">Material:</label>
-                <input type="text" class="form-input" name="material">
+                <label class="material">Material:</label>
+                <input type="text" class="rmaterial" name="material">
             </div>
 
             <div>
-                <label class="rol">Cantidad:</label>
-                <input type="text" class="form-input" name="cantidad">
+                <label class="cantidad">Cantidad:</label>
+                <input type="text" class="rcantidad" name="cantidad">
             </div>
 
             <div>
-                <button class="Registrar">Agregar</button>
+                <button class="boton bagregar">Agregar</button>
             </div>
-
+            
             <div>
-                <a  class="contraseña" href="/home">Regresar </a>
+                <a  class="boton bregresar" href="/home">Regresar </a>
             </div>
         </form>
-        <h1 class="tlogin">Materiales</h1><br>
+
         {% for material in materiales %}
-        <p>{{ material["material"] }}</p>
-        <p>{{ material["cantidad"] }}</p>
+        <div class="listam">
+            <p class="material2">{{ material["material"] }}</p>
+            <p class="cantidad2">{{ material["cantidad"] }}</p>
+        </div>
         {% endfor %}
-
         {% if rol == 1 %}
-
         {% endif %}
     </div>
-
 </body>

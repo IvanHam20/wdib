@@ -1,14 +1,22 @@
 <head>
     <link href="../static/css/style.css" rel="stylesheet">
 </head>
+<body class="background5"></body>
 
 <center>
-    <h1>Alumnos</h1>
+    <h1 class="listaMaterial">Alumnos</h1>
 </center>
-<form action="/compartir?id={{practica_id}}" method="POST">
-    {% for alumno in alumnos %}
-        <p>{{ alumno["name"] }}</p>
-        <input type="checkbox" name="{{alumno['id']}}">
-    {% endfor %}
-    <button>Compartir</button>
-</form>
+<h2 class="selecciona"> Selecciona a los alumnos a los que quieras compartir la  lista de materiales: </h2>
+<div>
+    <center>
+        <form action="/compartir?id={{practica_id}}" method="POST">
+            <br>
+            {% for alumno in alumnos %}
+                <a class="alumno">{{ alumno["name"] }}</a>
+                <input type="checkbox" name="{{alumno['id']}}">
+                <br>
+            {% endfor %}
+            <button class="boton bcompartir">Compartir</button>
+        </form>
+    </center>
+</div>

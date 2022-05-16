@@ -1,15 +1,44 @@
 .background{
     position: relative;
-
     background: #37678C;
+}
+
+.background2{
+    background: #0086A1;
+}
+
+.background3{
+    background: #fff;
+}
+
+.background4{
+    background: #F2C1A1;
+}
+
+.background5{
+    background: #849585;
 }
 
 .wdib{
     position: absolute;
-    width: 710px;
+    width: 300px;
     height: 116px;
-    left: 320px;
-    top: 116px;
+    left: 400px;
+    top: 166px;
+
+    font-family: 'Bodoni Moda';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 122px;
+}
+
+.wdib2{
+    position: absolute;
+    width: 300px;
+    height: 116px;
+    left: 600px;
+    top: 250px;
 
     font-family: 'Bodoni Moda';
     font-style: normal;
@@ -32,7 +61,7 @@
     font-family: 'Bodoni Moda';
     font-style: normal;
     font-weight: 00;
-    font-size: 20px;
+    font-size: 22px;
     line-height: 25px;
     text-align: center;
     text-decoration: none;
@@ -54,7 +83,7 @@
     font-family: 'Bodoni Moda';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 22px;
     line-height: 25px;
     text-align: center;
     text-decoration: none;
@@ -65,27 +94,6 @@
     width: 120px;
     height: 30px;
     left: 1100px;
-    top: 30px;
-
-    background: #F8B195;
-    border-radius: 50px;
-}
-
-.home{
-    font-family: 'Bodoni Moda';
-    font-style: normal;
-    font-weight: 50;
-    font-size: 20px;
-    line-height: 25px;
-    text-align: center;
-    text-decoration: none;
-
-    color: #000000;
-
-    position: absolute;
-    width: 120px;
-    height: 30px;
-    left: 38px;
     top: 30px;
 
     background: #F8B195;
@@ -113,7 +121,15 @@
     position: absolute;
     height: 300px;
     left: 300px;
-    top: -40px;
+    top: -60px;
+}
+
+.persona4{
+    position: absolute;
+    width: 428px;
+    height: 500px;
+    left: 100px;
+    top: 100px;
 }
 
 .registro2{
@@ -129,7 +145,7 @@
     font-size: 60px;
     line-height: 92px;
 
-    color: black;
+    color: white;
 }
 
 .rol{
@@ -144,7 +160,7 @@
     font-size: 30px;
     line-height: 46px;
 
-    color: #000000;
+    color: #fff;
 }
 
 .Rrol{
@@ -170,7 +186,7 @@
     font-weight: 400;
     font-size: 30px;
 
-    color: #000000;
+    color: #fff;
 }
 
 .rusuario{
@@ -199,7 +215,7 @@
     font-size: 30px;
     line-height: 46px;
 
-    color: #000000;
+    color: #fff;
 }
 
 .remail{
@@ -228,7 +244,7 @@
     font-size: 30px;
     line-height: 46px;
 
-    color: #000000;
+    color: #fff;
 }
 
 .rcontraseña{
@@ -254,11 +270,11 @@
     font-family: 'Bodoni Moda';
     font-style: normal;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     color: #000000;
 
-    background-image: linear-gradient(to left, #F8B195, #F2727F,#C16B86);
+    background-image: linear-gradient(to left, #0099B9, #27C2DE,#76D2E1);
 }
 
 .concuenta{
@@ -281,7 +297,23 @@
     line-height: 92px;
     display: block;
 
-    color: #000000;
+    color: #fff;
+}
+
+.inicioSesion{
+    width: 600px;
+    height: 92px;
+    left: 500px;
+    top: -25px;
+
+    font-family: 'Bodoni Moda';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 92px;
+    display: block;
+
+    color: #5F181C;
 }
 
 .correo{
@@ -297,6 +329,7 @@
     font-size: 30px;
     line-height: 46px;
     
+    color: #5F181C;
 }
 
 .rcorreo{
@@ -310,6 +343,7 @@
     border: none;
     outline: 0px;
 	border-bottom: 2px solid #F8B195;
+
 }
 
 .lcontra{
@@ -324,6 +358,8 @@
     font-weight: 400;
     font-size: 30px;
     line-height: 46px;
+
+    color: #5F181C;
 }
 
 .rlcontra{
@@ -386,27 +422,216 @@
 
 .practicas{
     position: left;
-
-    font-family: 'Bodoni Moda';
+    font-family: 'Sans-serif';
     font-style: normal;
     font-weight: 400;
     font-size: 30px;
+    text-decoration: none;
+    font-size: 25px;
 
     color: #000000;   
 }
 
 .compartir{
-    position: ri;
+    position: right;
+    font-family: 'Sans-serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    text-decoration: none;
+    font-size: 25px;
+
+    color: #B6B7A5;   
+}
+
+.listado{
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.listaMaterial{
+    width: 600px;
+    height: 92px;
 
     font-family: 'Bodoni Moda';
     font-style: normal;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 60px;
+    line-height: 92px;
+    display: block;
 
-    color: #000000;   
+    color: #D3B7A2;
 }
 
-.listado{
+.bcrear{
+    position: absolute;
+    height: 31px;
+    left: 30px;
+    top: 120px;
+    font-family: 'Bodoni Moda';
+    font-style: normal;
+    font-size: 25px;
+
+    color: #000000;
+    background: #B6B7A5; 
+}
+
+.salir{
+    position: absolute;
+    width: 70px;
+    height: 31px;
+    left: 1150px;
+    top: 120px;
+    font-family: 'Bodoni Moda';
+    font-style: normal;
+    font-size: 25px;
+    text-decoration: none;
+    text-align: center;
+
+    color: #000000;
+    background: #B6B7A5; 
+}
+
+.Materiales{
+    width: 600px;
+    height: 92px;
+    left: 30px;
+    top: -25px;
+
+    font-family: 'Bodoni Moda';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 92px;
+    display: block;
+
+    color: #D3B7A2;
+}
+
+.bagregar{
+    position: absolute;
+    height: 31px;
+    left: 1060px;
+    top: 100px;
+    font-family: 'Bodoni Moda';
+    font-style: normal;
+    font-size: 20px;
+
+    color: #000000;
+    background: #B6B7A5;    
+}
+
+.bregresar{
+    position: absolute;
+    width: 80px;
+    height: 31px;
+    left: 1150px;
+    top: 100px;
+    font-family: 'Bodoni Moda';
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+
+    color: #000000;
+    background: #B6B7A5;
+}
+
+.material{
+    position: absolute;
+    left: 400px;
+    top: 100px;
+    font-family: 'Bodoni Moda';
+    font-style: normal;
+    font-size: 20px;
+}
+
+.rmaterial{
+    position: absolute;
+    left: 475px;
+    top: 100px;
+    font-family: 'Bodoni Moda';
+    font-style: normal;
+    font-size: 15px;
+
+    background: none;
+    border: none;
+    outline: 0px;
+	border-bottom: 2px solid #F8B195;
+}
+
+.cantidad{
+    position: absolute;
+    left: 705px;
+    top: 100px;
+    font-family: 'Bodoni Moda';
+    font-style: normal;
+    font-size: 20px;
+}
+
+.rcantidad{
+    position: absolute;
+    left: 785px;
+    top: 100px;
+    font-family: 'Bodoni Moda';
+    font-style: normal;
+    font-size: 15px;
+
+    background: none;
+    border: none;
+    outline: 0px;
+	border-bottom: 2px solid #F8B195;
+}
+
+.listam{
     display: flex;
     justify-content: space-between;
+    width: 500px;
+}
+
+.material2{
+    font-family: 'Bodoni Moda';
+    font-style: normal;
+    font-size: 20px;
+}
+
+.cantidad2{
+    font-family: 'Bodoni Moda';
+    font-style: normal;
+    font-size: 20px;
+}
+
+.listaa{
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+}
+
+.bcompartir{
+    position: absolute;
+    height: 31px;
+    left: 1000px;
+    top: 120px;
+    font-family: 'Bodoni Moda';
+    font-style: normal;
+    font-size: 25px;
+
+    color: #000000;
+    background: #B6B7A5;
+}
+
+.selecciona{
+    position: absolute;
+    left: 50px;
+    top: 90px;
+    font-size: 25px;
+    color: #000000;
+
+}
+
+.alumno{
+    font-family: 'Bodoni Moda';
+    font-style: normal;
+    font-size: 25px;
 }
