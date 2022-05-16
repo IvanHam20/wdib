@@ -11,6 +11,9 @@
     <script>
         function addPractice() {
             let nombre = window.prompt('Introduzca el nombre del listado: ')
+            if (nombre === null || nombre === ""){
+                return;
+            }
             $.post("/home", {
                 data: nombre
             });

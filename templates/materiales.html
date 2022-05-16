@@ -6,6 +6,7 @@
     <center>
         <h1 class="Materiales">Materiales</h1><br>
     </center>
+    {% if rol == 1 %}
         <form action="/materiales?id={{practica_id}}" method="POST">
             <div>
                 <label class="material">Material:</label>
@@ -25,6 +26,13 @@
                 <a  class="boton bregresar" href="/home">Regresar </a>
             </div>
         </form>
+    {% endif %}
+
+    {% if rol == 2 %}
+        <div>
+            <a  class="boton bregresar" href="/home-alumno">Regresar </a>
+        </div>
+    {% endif %}
 
         {% for material in materiales %}
         <div class="listam">
@@ -32,7 +40,5 @@
             <p class="cantidad2">{{ material["cantidad"] }}</p>
         </div>
         {% endfor %}
-        {% if rol == 1 %}
-        {% endif %}
     </div>
 </body>

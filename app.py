@@ -2,6 +2,9 @@ from flask import Flask,render_template, request, redirect, url_for, session
 from flask_mysqldb import MySQL,MySQLdb
 from os import path 
 from notifypy import Notify
+import re
+
+regex = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')
 
 app = Flask(__name__)
 app.config['MYSQL_HOST'] = 'localhost'
@@ -115,13 +118,11 @@ def login():
 
     if request.method == 'POST':
         email = request.form['email']
-        # validar con regex
-        # if (email):
-        #    return redirect("/login")
+        # si el regex no lo valida, enviar un mensaje de error
+        if not re.fullmatch(regex, email):
+            return redirect("/login")
+        
         password = request.form['password']
-        # validar con regex
-        # if (password):
-        #    return redirect("/login")
 
         cur = mysql.connection.cursor()
         cur.execute("SELECT * FROM users WHERE email=%s",(email,))
